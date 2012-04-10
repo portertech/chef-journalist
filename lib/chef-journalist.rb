@@ -3,11 +3,11 @@ require 'chef/handler'
 
 class Journalist < Chef::Handler
   def initialize(resource_types=[])
-    Chef::Log.info "Generating updated resource report ..."
     @resource_types = resource_types.map {|t| t.to_sym }
   end
 
   def report
+    Chef::Log.info "Writing the updated resource report ..."
     updated_resources = case
     when @resource_types.empty?
       run_status.updated_resources
