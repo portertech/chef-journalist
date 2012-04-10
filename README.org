@@ -4,7 +4,7 @@
 
 * Usage
 
-** Configure Chef To Use The Handler
+*** Configure Chef To Use The Handler
 
 Append the following to your Chef client configs, usually at =/etc/chef/client.rb=
 
@@ -16,7 +16,7 @@ You can provide an array of resource types to be included in the report, default
 
 : report_handlers << Journalist.new(%w[template cookbook_file])
 
-** Example Output
+*** Example Output
 
 : Running report handlers
 : Writing the updated resource report ...
