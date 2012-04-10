@@ -1,0 +1,13 @@
+* Install
+
+: gem install chef-journalist
+
+* Usage
+
+** Configure Chef To Use The Handler
+
+Append the following to your Chef client configs, usually at =/etc/chef/client.rb=
+
+: require "chef-journalist"
+: report_handlers << Journalist.new
+: exception_handlers << Journalist.new
