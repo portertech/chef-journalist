@@ -16,7 +16,7 @@ module Chef
       else
         run_status.updated_resources.select {|r| @resource_types.include? r.resource_name }
       end
-      updated_resources.each {|r| Chef::Log.info "  #{r.to_s}" }
+      updated_resources.each {|r| Chef::Log.info "  #{r}" }
     end
   end
 end
