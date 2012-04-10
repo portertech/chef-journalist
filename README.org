@@ -15,3 +15,7 @@ Append the following to your Chef client configs, usually at =/etc/chef/client.r
 You can provide an array of resource types to be included in the report, default is all
 
 : report_handlers << Journalist.new(%w[template cookbook_file])
+
+* License
+
+Chef-Journalist is released under the [[https://github.com/portertech/chef-journalist/blob/master/MIT-LICENSE.txt][MIT license]].
