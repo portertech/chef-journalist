@@ -14,6 +14,6 @@ class Journalist < Chef::Handler
     else
       run_status.updated_resources.select {|r| @resource_types.include? r.resource_name }
     end
-    updated_resources.uniq.each {|r| Chef::Log.info "  #{r}" }
+    updated_resources.map {|r| r.to_s }.uniq.each {|r| Chef::Log.info "  #{r}" }
   end
 end
